@@ -45,38 +45,6 @@ class EnsureTrustedPage extends StatelessWidget {
                   ),
                 ],
               ),
-              // DISCOUNT
-              Stack(
-                fit: StackFit.expand,
-                children: [
-                  Container(
-                    color: const Color(0xFF5E2777), // PediaSure Purple
-                  ),
-                  Opacity(
-                    opacity: 0.8,
-                    child: Image.asset(
-                      'assets/images/ensure_discount.jpg',
-                      fit: BoxFit.cover,
-                      gaplessPlayback: true,
-                    ),
-                  ),
-                  ClipRect(
-                    child: BackdropFilter(
-                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                      child: Container(
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: Image.asset(
-                      'assets/images/ensure_discount.jpg',
-                      fit: BoxFit.contain,
-                      gaplessPlayback: true,
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
           // Back Button
@@ -95,10 +63,30 @@ class EnsureTrustedPage extends StatelessWidget {
             bottom: 16,
             right: 16,
             child: SafeArea(
-              child: FloatingActionButton(
-                onPressed: () => context.go('/'),
-                backgroundColor: const Color(0xFF9f864b),
-                child: const Icon(Icons.home, color: Colors.white),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  FloatingActionButton.extended(
+                    heroTag: 'mdcTrustedBtn',
+                    onPressed: () => context.push('/ensure/mdc_discount'),
+                    backgroundColor: const Color(0xFF9f864b),
+                    icon: const Icon(Icons.discount, color: Colors.white),
+                    label: const Text(
+                      'MDC DISCOUNT',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  FloatingActionButton(
+                    heroTag: 'homeTrustedBtn',
+                    onPressed: () => context.go('/'),
+                    backgroundColor: const Color(0xFF9f864b),
+                    child: const Icon(Icons.home, color: Colors.white),
+                  ),
+                ],
               ),
             ),
           ),

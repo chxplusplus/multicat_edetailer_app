@@ -60,8 +60,8 @@ class LandingView extends StatelessWidget {
                       builder: (context, constraints) {
                         final double itemSize = constraints.maxWidth < 600
                             ? 160
-                            : 270; // Slightly smaller to accommodate the layout better
-                        
+                            : 300; // Slightly smaller to accommodate the layout better
+
                         return Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -73,15 +73,32 @@ class LandingView extends StatelessWidget {
                                     name: 'Ensure\nGOLD',
                                     color: const Color(0xFF003D7C),
                                     size: itemSize,
-                                    assetPath: 'assets/images/ensure_gold_logo.png',
+                                    assetPath:
+                                        'assets/images/ensure_gold_logo.png',
                                     onTap: () => context.push('/ensure'),
                                   ),
                                   const SizedBox(width: 30),
                                   _buildBrandButton(
+                                    name: 'PediaSure\nB',
+                                    color: const Color(0xFF5E2777),
+                                    size: itemSize,
+                                    assetPath:
+                                        'assets/images/pediasure_logo.png',
+                                    onTap: () =>
+                                        context.push('/pediasure/landing'),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 30),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  _buildBrandButton(
                                     name: 'Glucerna',
                                     color: const Color(0xFF004D55),
                                     size: itemSize,
-                                    assetPath: 'assets/images/glucerna_logo.png',
+                                    assetPath:
+                                        'assets/images/glucerna_logo.png',
                                     onTap: () => context.push('/glucerna'),
                                   ),
                                   const SizedBox(width: 30),
@@ -92,27 +109,6 @@ class LandingView extends StatelessWidget {
                                     textColor: Colors.blue[900],
                                     assetPath: 'assets/images/similac_logo.png',
                                     onTap: () => context.push('/similac'),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 30),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  _buildBrandButton(
-                                    name: 'PediaSure\nA',
-                                    color: const Color(0xFF5E2777),
-                                    size: itemSize,
-                                    assetPath: 'assets/images/pediasure_3p.png',
-                                    onTap: () => context.push('/pediasure'), // Same route for now
-                                  ),
-                                  const SizedBox(width: 30),
-                                  _buildBrandButton(
-                                    name: 'PediaSure\nB',
-                                    color: const Color(0xFF5E2777),
-                                    size: itemSize,
-                                    assetPath: 'assets/images/pediasure_10p.png',
-                                    onTap: () => context.push('/pediasure_b'),
                                   ),
                                 ],
                               ),

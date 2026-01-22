@@ -16,10 +16,12 @@ import '../../features/similac/presentation/pages/similac_practicality_page.dart
 import '../../features/glucerna/presentation/pages/glucerna_quality_page.dart';
 import '../../features/glucerna/presentation/pages/glucerna_trusted_page.dart';
 import '../../features/glucerna/presentation/pages/glucerna_smart_value_page.dart';
+import '../../features/pediasure/presentation/pages/pediasure_b_practicality_page.dart';
 import '../../features/pediasure/presentation/pages/pediasure_b_page.dart';
 import '../../features/pediasure/presentation/pages/pediasure_b_nourishing_page.dart';
 import '../../features/pediasure/presentation/pages/pediasure_b_safety_trust_page.dart';
-import '../../features/pediasure/presentation/pages/pediasure_b_practicality_page.dart';
+import '../../features/ensure/presentation/pages/ensure_mdc_discount.dart';
+import '../../features/pediasure/presentation/pages/pediasure_landing_page.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -110,6 +112,14 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/glucerna/smart_value',
       builder: (context, state) => const GlucernaSmartValuePage(),
+    ),
+    GoRoute(
+      path: '/ensure/mdc_discount',
+      builder: (context, state) => const EnsureMDCDiscountPage(),
+    ),
+    GoRoute(
+      path: '/pediasure/landing',
+      builder: (context, state) => const PediasureLandingPage(),
     ),
   ],
 );

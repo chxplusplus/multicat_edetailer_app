@@ -58,6 +58,23 @@ class EnsurePage extends StatelessWidget {
                   ],
                 ),
               ),
+              // MDC DISCOUNT Button
+              Positioned(
+                bottom: 32,
+                right: 32,
+                child: FloatingActionButton.extended(
+                  onPressed: () => context.push('/ensure/mdc_discount'),
+                  backgroundColor: const Color(0xFF9f864b),
+                  icon: const Icon(Icons.discount, color: Colors.white),
+                  label: const Text(
+                    'MDC DISCOUNT',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
