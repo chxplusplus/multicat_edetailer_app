@@ -22,13 +22,20 @@ import '../../features/pediasure/presentation/pages/pediasure_b_nourishing_page.
 import '../../features/pediasure/presentation/pages/pediasure_b_safety_trust_page.dart';
 import '../../features/ensure/presentation/pages/ensure_mdc_discount.dart';
 import '../../features/pediasure/presentation/pages/pediasure_landing_page.dart';
+import '../../features/landing/presentation/pages/channel_selection_page.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const LandingPage(),
+      builder: (context, state) => const ChannelSelectionPage(),
+    ),
+    GoRoute(
+      path: '/brand_selection',
+      builder: (context, state) => LandingPage(
+        channel: state.uri.queryParameters['channel'],
+      ),
     ),
     GoRoute(
       path: '/ensure',

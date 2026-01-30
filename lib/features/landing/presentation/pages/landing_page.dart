@@ -5,19 +5,21 @@ import '../bloc/landing_bloc.dart';
 import '../bloc/landing_event.dart';
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({super.key});
+  final String? channel;
+  const LandingPage({super.key, this.channel});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => LandingBloc()..add(LandingStarted()),
-      child: const LandingView(),
+      child: LandingView(channel: channel),
     );
   }
 }
 
 class LandingView extends StatelessWidget {
-  const LandingView({super.key});
+  final String? channel;
+  const LandingView({super.key, this.channel});
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,49 @@ class LandingView extends StatelessWidget {
                         final double itemSize = constraints.maxWidth < 600
                             ? 160
                             : 300; // Slightly smaller to accommodate the layout better
+
+                        bool isMDC = channel == 'mdc';
+
+                        if (isMDC) {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 120), // Reduced space above brands
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  _buildBrandButton(
+                                    name: 'Ensure\nGOLD',
+                                    color: const Color(0xFF003D7C),
+                                    size: itemSize * 1.02,
+                                    assetPath:
+                                        'assets/images/ensure_gold_logo.png',
+                                    onTap: () => context.push('/ensure'),
+                                  ),
+                                  const SizedBox(width: 20),
+                                  _buildBrandButton(
+                                    name: 'PediaSure\nB',
+                                    color: const Color(0xFF5E2777),
+                                    size: itemSize * 1.02,
+                                    assetPath:
+                                        'assets/images/pediasure_logo.png',
+                                    onTap: () =>
+                                        context.push('/pediasure/landing'),
+                                  ),
+                                  const SizedBox(width: 20),
+                                  _buildBrandButton(
+                                    name: 'Glucerna',
+                                    color: const Color(0xFF004D55),
+                                    size: itemSize * 1.02,
+                                    assetPath:
+                                        'assets/images/glucerna_logo.png',
+                                    onTap: () => context.push('/glucerna'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          );
+                        }
 
                         return Center(
                           child: Column(
@@ -133,6 +178,16 @@ class LandingView extends StatelessWidget {
                     width: 140, // Adjust size as needed
                     fit: BoxFit.contain,
                   ),
+                ),
+              ),
+              // Back Button
+              Positioned(
+                top: 16,
+                left: 16,
+                child: IconButton(
+                  icon:
+                      const Icon(Icons.arrow_back, color: Colors.white, size: 32),
+                  onPressed: () => context.pop(),
                 ),
               ),
             ],

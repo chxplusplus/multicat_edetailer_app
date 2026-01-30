@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'dart:ui' as ui;
+import 'glucerna_price.dart';
 
 class GlucernaQualityPage extends StatelessWidget {
   const GlucernaQualityPage({super.key});
@@ -18,12 +19,12 @@ class GlucernaQualityPage extends StatelessWidget {
                 fit: StackFit.expand,
                 children: [
                   Container(
-                    color: const Color(0xFF5E2777), // PediaSure Purple
+                    color: const Color(0xff0f3150), // PediaSure Purple
                   ),
                   Opacity(
-                    opacity: 0.8,
+                    opacity: 1,
                     child: Image.asset(
-                      'assets/images/glucerna_1.png',
+                      'assets/images/glucerna_130_1.png',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -38,7 +39,7 @@ class GlucernaQualityPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'assets/images/glucerna_1.png',
+                      'assets/images/glucerna_130_1.png',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
@@ -50,12 +51,12 @@ class GlucernaQualityPage extends StatelessWidget {
                 fit: StackFit.expand,
                 children: [
                   Container(
-                    color: const Color(0xFF5E2777), // PediaSure Purple
+                    color: const Color(0xffffffff), // PediaSure Purple
                   ),
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/glucerna_2.png',
+                      'assets/images/glucerna_130_7.png',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -70,7 +71,7 @@ class GlucernaQualityPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'assets/images/glucerna_2.png',
+                      'assets/images/glucerna_130_7.png',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
@@ -82,12 +83,12 @@ class GlucernaQualityPage extends StatelessWidget {
                 fit: StackFit.expand,
                 children: [
                   Container(
-                    color: const Color(0xFF5E2777), // PediaSure Purple
+                    color: const Color(0xff0f3150), // PediaSure Purple
                   ),
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/glucerna_3.png',
+                      'assets/images/glucerna_130_2.png',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -102,7 +103,7 @@ class GlucernaQualityPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'assets/images/glucerna_3.png',
+                      'assets/images/glucerna_130_2.png',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
@@ -110,37 +111,7 @@ class GlucernaQualityPage extends StatelessWidget {
                 ],
               ),
               // Page 4
-              Stack(
-                fit: StackFit.expand,
-                children: [
-                  Container(
-                    color: const Color(0xFF5E2777), // PediaSure Purple
-                  ),
-                  Opacity(
-                    opacity: 0.8,
-                    child: Image.asset(
-                      'assets/images/glucerna_4.png',
-                      fit: BoxFit.cover,
-                      gaplessPlayback: true,
-                    ),
-                  ),
-                  ClipRect(
-                    child: BackdropFilter(
-                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                      child: Container(
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: Image.asset(
-                      'assets/images/glucerna_4.png',
-                      fit: BoxFit.contain,
-                      gaplessPlayback: true,
-                    ),
-                  ),
-                ],
-              ),
+              const GlucernaValueForMoney(showNavigationButtons: false)
             ],
           ),
           // Back Button

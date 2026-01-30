@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'dart:ui' as ui;
+import 'glucerna_price.dart';
 
 class GlucernaTrustedPage extends StatelessWidget {
   const GlucernaTrustedPage({super.key});
@@ -18,12 +19,12 @@ class GlucernaTrustedPage extends StatelessWidget {
                 fit: StackFit.expand,
                 children: [
                   Container(
-                    color: const Color(0xFF5E2777), // PediaSure Purple
+                    color: const Color(0xff0f3150), // PediaSure Purple
                   ),
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/glucerna_3.png',
+                      'assets/images/glucerna_130_3.png',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -38,7 +39,7 @@ class GlucernaTrustedPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'assets/images/glucerna_3.png',
+                      'assets/images/glucerna_130_3.png',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
@@ -55,7 +56,7 @@ class GlucernaTrustedPage extends StatelessWidget {
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/glucerna_4.png',
+                      'assets/images/glucerna_2.png',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -70,7 +71,41 @@ class GlucernaTrustedPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'assets/images/glucerna_4.png',
+                      'assets/images/glucerna_2.png',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              // Page 4
+              const GlucernaValueForMoney(showNavigationButtons: false),
+              // PAGE 5
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  Container(
+                    color: const Color(0xffffffff), // PediaSure Purple
+                  ),
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/glucerna_130_4.png',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Image.asset(
+                      'assets/images/glucerna_130_4.png',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
