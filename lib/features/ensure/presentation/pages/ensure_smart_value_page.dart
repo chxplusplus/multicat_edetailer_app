@@ -4,7 +4,8 @@ import 'dart:ui' as ui;
 import 'ensure_savings.dart';
 
 class EnsureSmartValuePage extends StatelessWidget {
-  const EnsureSmartValuePage({super.key});
+  final String? channel;
+  const EnsureSmartValuePage({super.key, this.channel});
 
   @override
   Widget build(BuildContext context) {
@@ -101,20 +102,22 @@ class EnsureSmartValuePage extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  FloatingActionButton.extended(
-                    heroTag: 'mdcSmartValueBtn',
-                    onPressed: () => context.push('/ensure/mdc_discount'),
-                    backgroundColor: const Color(0xFF9f864b),
-                    icon: const Icon(Icons.discount, color: Colors.white),
-                    label: const Text(
-                      'MDC DISCOUNT',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                  if (channel == 'mdc')
+                    FloatingActionButton.extended(
+                      heroTag: 'mdcSmartValueBtn',
+                      onPressed: () => context.push('/ensure/mdc_discount'),
+                      backgroundColor: const Color(0xFF9f864b),
+                      icon: const Icon(Icons.discount, color: Colors.white),
+                      label: const Text(
+                        'MDC DISCOUNT',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 16),
+                  if (channel == 'mdc')
+                    const SizedBox(width: 16),
                   FloatingActionButton(
                     heroTag: 'homeSmartValueBtn',
                     onPressed: () => context.go('/'),

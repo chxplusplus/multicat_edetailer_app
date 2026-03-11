@@ -3,7 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'dart:ui' as ui;
 
 class EnsureQualityPage extends StatelessWidget {
-  const EnsureQualityPage({super.key});
+  final String? channel;
+  const EnsureQualityPage({super.key, this.channel});
 
   @override
   Widget build(BuildContext context) {
@@ -130,20 +131,22 @@ class EnsureQualityPage extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  FloatingActionButton.extended(
-                    heroTag: 'mdcQualityBtn',
-                    onPressed: () => context.push('/ensure/mdc_discount'),
-                    backgroundColor: const Color(0xFF9f864b),
-                    icon: const Icon(Icons.discount, color: Colors.white),
-                    label: const Text(
-                      'MDC DISCOUNT',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                  if (channel == 'mdc')
+                    FloatingActionButton.extended(
+                      heroTag: 'mdcQualityBtn',
+                      onPressed: () => context.push('/ensure/mdc_discount'),
+                      backgroundColor: const Color(0xFF9f864b),
+                      icon: const Icon(Icons.discount, color: Colors.white),
+                      label: const Text(
+                        'MDC DISCOUNT',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 16),
+                  if (channel == 'mdc')
+                    const SizedBox(width: 16),
                   FloatingActionButton(
                     heroTag: 'homeQualityBtn',
                     onPressed: () => context.go('/'),

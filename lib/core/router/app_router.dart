@@ -23,6 +23,7 @@ import '../../features/pediasure/presentation/pages/pediasure_b_safety_trust_pag
 import '../../features/ensure/presentation/pages/ensure_mdc_discount.dart';
 import '../../features/pediasure/presentation/pages/pediasure_landing_page.dart';
 import '../../features/landing/presentation/pages/channel_selection_page.dart';
+import '../../features/landing/presentation/pages/alaga_rewards_page.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -39,7 +40,9 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: '/ensure',
-      builder: (context, state) => const EnsurePage(),
+      builder: (context, state) => EnsurePage(
+        channel: state.uri.queryParameters['channel'],
+      ),
     ),
     GoRoute(
       path: '/pediasure',
@@ -59,15 +62,21 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: '/ensure/quality',
-      builder: (context, state) => const EnsureQualityPage(),
+      builder: (context, state) => EnsureQualityPage(
+        channel: state.uri.queryParameters['channel'],
+      ),
     ),
     GoRoute(
       path: '/ensure/trusted',
-      builder: (context, state) => const EnsureTrustedPage(),
+      builder: (context, state) => EnsureTrustedPage(
+        channel: state.uri.queryParameters['channel'],
+      ),
     ),
     GoRoute(
       path: '/ensure/smart_value',
-      builder: (context, state) => const EnsureSmartValuePage(),
+      builder: (context, state) => EnsureSmartValuePage(
+        channel: state.uri.queryParameters['channel'],
+      ),
     ),
     GoRoute(
       path: '/pediasure/nourishing',
@@ -127,6 +136,10 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/pediasure/landing',
       builder: (context, state) => const PediasureLandingPage(),
+    ),
+    GoRoute(
+      path: '/alaga_rewards',
+      builder: (context, state) => const AlagaRewardsPage(),
     ),
   ],
 );

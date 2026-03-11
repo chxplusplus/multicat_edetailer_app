@@ -80,7 +80,7 @@ class LandingView extends StatelessWidget {
                                     size: itemSize * 1.02,
                                     assetPath:
                                         'assets/images/ensure_gold_logo.png',
-                                    onTap: () => context.push('/ensure'),
+                                    onTap: () => context.push('/ensure?channel=$channel'),
                                   ),
                                   const SizedBox(width: 20),
                                   _buildBrandButton(
@@ -99,7 +99,7 @@ class LandingView extends StatelessWidget {
                                     size: itemSize * 1.02,
                                     assetPath:
                                         'assets/images/glucerna_logo.png',
-                                    onTap: () => context.push('/glucerna'),
+                                    onTap: () => context.push('/glucerna?channel=$channel'),
                                   ),
                                 ],
                               ),
@@ -120,7 +120,7 @@ class LandingView extends StatelessWidget {
                                     size: itemSize,
                                     assetPath:
                                         'assets/images/ensure_gold_logo.png',
-                                    onTap: () => context.push('/ensure'),
+                                    onTap: () => context.push('/ensure?channel=$channel'),
                                   ),
                                   const SizedBox(width: 30),
                                   _buildBrandButton(
@@ -144,7 +144,7 @@ class LandingView extends StatelessWidget {
                                     size: itemSize,
                                     assetPath:
                                         'assets/images/glucerna_logo.png',
-                                    onTap: () => context.push('/glucerna'),
+                                    onTap: () => context.push('/glucerna?channel=$channel'),
                                   ),
                                   const SizedBox(width: 30),
                                   _buildBrandButton(
@@ -153,7 +153,7 @@ class LandingView extends StatelessWidget {
                                     size: itemSize,
                                     textColor: Colors.blue[900],
                                     assetPath: 'assets/images/similac_logo.png',
-                                    onTap: () => context.push('/similac'),
+                                    onTap: () => context.push('/similac?channel=$channel'),
                                   ),
                                 ],
                               ),
@@ -171,7 +171,7 @@ class LandingView extends StatelessWidget {
                 right: 20,
                 child: GestureDetector(
                   onTap: () {
-                    // Action for Alaga button
+                    context.push('/alaga_rewards');
                   },
                   child: Image.asset(
                     'assets/images/alaga_button.png',
