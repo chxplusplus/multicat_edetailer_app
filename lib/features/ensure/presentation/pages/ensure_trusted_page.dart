@@ -24,7 +24,7 @@ class EnsureTrustedPage extends StatelessWidget {
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/ensure_1.png',
+                      'assets/images/ensure_trusted_oct_1.jpg',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -39,7 +39,71 @@ class EnsureTrustedPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'assets/images/ensure_1.png',
+                      'assets/images/ensure_trusted_oct_1.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              // Page 2
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  Container(
+                    color: const Color(0xFF5E2777), // PediaSure Purple
+                  ),
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/ensure_trusted_oct_2.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Image.asset(
+                      'assets/images/ensure_trusted_oct_2.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              // Page 3
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  Container(
+                    color: const Color(0xFF5E2777), // PediaSure Purple
+                  ),
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/ensure_trusted_oct_3.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Image.asset(
+                      'assets/images/ensure_trusted_oct_3.jpg',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
@@ -54,7 +118,8 @@ class EnsureTrustedPage extends StatelessWidget {
             left: 16,
             child: SafeArea(
               child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white, size: 32),
+                icon:
+                    const Icon(Icons.arrow_back, color: Colors.white, size: 32),
                 onPressed: () => context.pop(),
               ),
             ),
@@ -81,8 +146,7 @@ class EnsureTrustedPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  if (channel == 'mdc')
-                    const SizedBox(width: 16),
+                  if (channel == 'mdc') const SizedBox(width: 16),
                   FloatingActionButton(
                     heroTag: 'homeTrustedBtn',
                     onPressed: () => context.go('/'),

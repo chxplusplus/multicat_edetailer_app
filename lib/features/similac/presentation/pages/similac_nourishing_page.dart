@@ -24,14 +24,14 @@ class SimilacNourishingPage extends StatelessWidget {
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/similac_artboard_2.png',
+                      'assets/images/quality_similac_01.jpg',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
                   ),
                   ClipRect(
                     child: BackdropFilter(
-                      filter:  ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Container(
                         color: Colors.transparent,
                       ),
@@ -40,7 +40,7 @@ class SimilacNourishingPage extends StatelessWidget {
                   // Main Image
                   Center(
                     child: Image.asset(
-                      'assets/images/similac_artboard_2.png',
+                      'assets/images/quality_similac_01.jpg',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
@@ -58,14 +58,14 @@ class SimilacNourishingPage extends StatelessWidget {
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/similac_artboard_4.png',
+                      'assets/images/quality_similac_02.jpg',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
                   ),
                   ClipRect(
                     child: BackdropFilter(
-                      filter:  ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Container(
                         color: Colors.transparent,
                       ),
@@ -74,13 +74,115 @@ class SimilacNourishingPage extends StatelessWidget {
                   // Main Image
                   Center(
                     child: Image.asset(
-                      'assets/images/similac_artboard_4.png',
+                      'assets/images/quality_similac_02.jpg',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
                   ),
                 ],
-              )
+              ),
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Gold Background Base
+                  Container(
+                    color: const Color(0xFFFFD700), // Gold
+                  ),
+                  // Blurred Background
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/quality_similac_03.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  // Main Image
+                  Center(
+                    child: Image.asset(
+                      'assets/images/quality_similac_03.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Gold Background Base
+                  Container(
+                    color: const Color(0xFFFFD700), // Gold
+                  ),
+                  // Blurred Background
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/quality_similac_04.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  // Main Image
+                  Center(
+                    child: Image.asset(
+                      'assets/images/quality_similac_04.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Gold Background Base
+                  Container(
+                    color: const Color(0xFFFFD700), // Gold
+                  ),
+                  // Blurred Background
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/quality_similac_05.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  // Main Image
+                  Center(
+                    child: Image.asset(
+                      'assets/images/quality_similac_05.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
           // Back Button

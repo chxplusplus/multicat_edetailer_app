@@ -12,7 +12,7 @@ class AlagaRewardsPage extends StatelessWidget {
           // Background Image
           Positioned.fill(
             child: Image.asset(
-              'assets/images/alaga_rewards.png',
+              'assets/images/alaga_rewards.jpg',
               fit: BoxFit.cover,
             ),
           ),

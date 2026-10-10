@@ -5,6 +5,9 @@ import '../../features/pediasure/presentation/pages/pediasure_page.dart';
 import '../../features/similac/presentation/pages/similac_page.dart';
 import '../../features/glucerna/presentation/pages/glucerna_page.dart';
 import '../../features/ensure/presentation/pages/ensure_quality_page.dart';
+import '../../features/ensure/presentation/pages/ensure_enduser_page.dart';
+import '../../features/ensure/presentation/pages/ensure_careuser_page.dart';
+import '../../features/ensure/presentation/pages/ensure_savings_oct_page.dart';
 import '../../features/ensure/presentation/pages/ensure_trusted_page.dart';
 import '../../features/ensure/presentation/pages/ensure_smart_value_page.dart';
 import '../../features/pediasure/presentation/pages/pediasure_nourishing_page.dart';
@@ -24,6 +27,8 @@ import '../../features/ensure/presentation/pages/ensure_mdc_discount.dart';
 import '../../features/pediasure/presentation/pages/pediasure_landing_page.dart';
 import '../../features/landing/presentation/pages/channel_selection_page.dart';
 import '../../features/landing/presentation/pages/alaga_rewards_page.dart';
+import '../../features/landing/presentation/pages/risk_check_page.dart';
+
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -63,6 +68,24 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/ensure/quality',
       builder: (context, state) => EnsureQualityPage(
+        channel: state.uri.queryParameters['channel'],
+      ),
+    ),
+    GoRoute(
+      path: '/ensure/enduser',
+      builder: (context, state) => EnsureEndUserPage(
+        channel: state.uri.queryParameters['channel'],
+      ),
+    ),
+    GoRoute(
+      path: '/ensure/careuser',
+      builder: (context, state) => EnsureCareUserPage(
+        channel: state.uri.queryParameters['channel'],
+      ),
+    ),
+    GoRoute(
+      path: '/ensure/savingsoct',
+      builder: (context, state) => EnsureSavingsOctoberPage(
         channel: state.uri.queryParameters['channel'],
       ),
     ),
@@ -140,6 +163,10 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/alaga_rewards',
       builder: (context, state) => const AlagaRewardsPage(),
+    ),
+    GoRoute(
+      path: '/risk_check',
+      builder: (context, state) => const RiskCheckPage(),
     ),
   ],
 );

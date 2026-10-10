@@ -46,38 +46,6 @@ class GlucernaTrustedPage extends StatelessWidget {
                   ),
                 ],
               ),
-              // Page ramadan
-              Stack(
-                fit: StackFit.expand,
-                children: [
-                  Container(
-                    color: const Color(0xff0f3150), // PediaSure Purple
-                  ),
-                  Opacity(
-                    opacity: 0.8,
-                    child: Image.asset(
-                      'assets/images/ramadan.jpg',
-                      fit: BoxFit.cover,
-                      gaplessPlayback: true,
-                    ),
-                  ),
-                  ClipRect(
-                    child: BackdropFilter(
-                      filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                      child: Container(
-                        color: Colors.transparent,
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: Image.asset(
-                      'assets/images/ramadan.jpg',
-                      fit: BoxFit.contain,
-                      gaplessPlayback: true,
-                    ),
-                  ),
-                ],
-              ),
               // Page 2
               Stack(
                 fit: StackFit.expand,
@@ -143,7 +111,7 @@ class GlucernaTrustedPage extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
+              )
             ],
           ),
           // Back Button
@@ -152,7 +120,8 @@ class GlucernaTrustedPage extends StatelessWidget {
             left: 16,
             child: SafeArea(
               child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.white, size: 32),
+                icon:
+                    const Icon(Icons.arrow_back, color: Colors.white, size: 32),
                 onPressed: () => context.pop(),
               ),
             ),

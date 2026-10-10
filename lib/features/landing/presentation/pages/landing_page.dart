@@ -99,7 +99,8 @@ class LandingView extends StatelessWidget {
                                     size: itemSize * 1.02,
                                     assetPath:
                                         'assets/images/glucerna_logo.png',
-                                    onTap: () => context.push('/glucerna?channel=$channel'),
+                                    onTap: () => context.push('/risk_check'),
+
                                   ),
                                 ],
                               ),
@@ -144,7 +145,8 @@ class LandingView extends StatelessWidget {
                                     size: itemSize,
                                     assetPath:
                                         'assets/images/glucerna_logo.png',
-                                    onTap: () => context.push('/glucerna?channel=$channel'),
+                                    onTap: () => context.push('/risk_check'),
+
                                   ),
                                   const SizedBox(width: 30),
                                   _buildBrandButton(

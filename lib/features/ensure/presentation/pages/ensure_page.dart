@@ -43,18 +43,23 @@ class EnsurePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     _buildImageButton(
-                      assetPath: 'assets/images/ensure_gold_quality_button.png',
-                      onTap: () => context.push('/ensure/quality?channel=$channel'),
+                      assetPath: 'assets/images/ensure_gold_enduser_button.png',
+                      onTap: () => context.push('/ensure/enduser?channel=$channel'),
                     ),
-                    const SizedBox(width: 40),
+                    const SizedBox(width: 10),
+                    _buildImageButton(
+                      assetPath: 'assets/images/ensure_gold_careuser_button.png',
+                      onTap: () => context.push('/ensure/careuser?channel=$channel'),
+                    ),
+                    const SizedBox(width: 10),
                     _buildImageButton(
                       assetPath: 'assets/images/ensure_gold_trusted_button.png',
                       onTap: () => context.push('/ensure/trusted?channel=$channel'),
                     ),
-                    const SizedBox(width: 40),
+                    const SizedBox(width: 10),
                     _buildImageButton(
                       assetPath: 'assets/images/ensure_gold_value_button.png',
-                      onTap: () => context.push('/ensure/smart_value?channel=$channel'),
+                      onTap: () => context.push('/ensure/savingsoct?channel=$channel'),
                     ),
                   ],
                 ),

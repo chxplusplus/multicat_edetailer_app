@@ -24,7 +24,7 @@ class SimilacSafetyTrustPage extends StatelessWidget {
                   Opacity(
                     opacity: 0.8,
                     child: Image.asset(
-                      'assets/images/similac_artboard_4.png',
+                      'assets/images/trusted_similac_01.jpg',
                       fit: BoxFit.cover,
                       gaplessPlayback: true,
                     ),
@@ -40,7 +40,75 @@ class SimilacSafetyTrustPage extends StatelessWidget {
                   // Main Image
                   Center(
                     child: Image.asset(
-                      'assets/images/similac_artboard_4.png',
+                      'assets/images/trusted_similac_01.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Gold Background Base
+                  Container(
+                    color: const Color(0xFFFFD700), // Gold
+                  ),
+                  // Blurred Background
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/trusted_similac_02.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter:  ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  // Main Image
+                  Center(
+                    child: Image.asset(
+                      'assets/images/trusted_similac_02.jpg',
+                      fit: BoxFit.contain,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                ],
+              ),
+              Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Gold Background Base
+                  Container(
+                    color: const Color(0xFFFFD700), // Gold
+                  ),
+                  // Blurred Background
+                  Opacity(
+                    opacity: 0.8,
+                    child: Image.asset(
+                      'assets/images/trusted_similac_03.jpg',
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
+                    ),
+                  ),
+                  ClipRect(
+                    child: BackdropFilter(
+                      filter:  ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ),
+                  // Main Image
+                  Center(
+                    child: Image.asset(
+                      'assets/images/trusted_similac_03.jpg',
                       fit: BoxFit.contain,
                       gaplessPlayback: true,
                     ),
