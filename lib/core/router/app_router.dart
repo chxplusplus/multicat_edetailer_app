@@ -28,6 +28,10 @@ import '../../features/pediasure/presentation/pages/pediasure_landing_page.dart'
 import '../../features/landing/presentation/pages/channel_selection_page.dart';
 import '../../features/landing/presentation/pages/alaga_rewards_page.dart';
 import '../../features/landing/presentation/pages/risk_check_page.dart';
+import '../../features/pediasure/presentation/pages/pediasure_c_page.dart';
+import '../../features/pediasure/presentation/pages/pediasure_c_nourishing_page.dart';
+import '../../features/pediasure/presentation/pages/pediasure_c_safety_trust_page.dart';
+import '../../features/pediasure/presentation/pages/pediasure_c_practicality_page.dart';
 
 
 final appRouter = GoRouter(
@@ -167,6 +171,24 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/risk_check',
       builder: (context, state) => const RiskCheckPage(),
+    ),
+    // PEDIASURE NIGHT
+    GoRoute(
+      path: '/pediasure_c',
+      builder: (context, state) => const PediasureCPage(),
+    ),
+    // Pediasure B detail routes
+    GoRoute(
+      path: '/pediasure_c/nourishing',
+      builder: (context, state) => const PediasureCNourishingPage(),
+    ),
+    GoRoute(
+      path: '/pediasure_c/safety_trust',
+      builder: (context, state) => const PediasureCSafetyTrustPage(),
+    ),
+    GoRoute(
+      path: '/pediasure_c/practicality',
+      builder: (context, state) => const PediasureCPracticalityPage(),
     ),
   ],
 );

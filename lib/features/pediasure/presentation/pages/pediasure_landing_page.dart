@@ -57,7 +57,7 @@ class PediasureLandingPage extends StatelessWidget {
                       builder: (context, constraints) {
                         final double itemSize = constraints.maxWidth < 600
                             ? 160
-                            : 350; // Slightly smaller to accommodate the layout better
+                            : 300; // Slightly smaller to accommodate the layout better
 
                         return Center(
                           child: Column(
@@ -81,6 +81,14 @@ class PediasureLandingPage extends StatelessWidget {
                                     size: itemSize,
                                     assetPath: 'assets/images/pedia_10.png',
                                     onTap: () => context.push('/pediasure_b'),
+                                  ),
+                                  const SizedBox(width: 30),
+                                  _buildBrandButton(
+                                    name: 'PediaSure\nB',
+                                    color: const Color(0xFF5E2777),
+                                    size: itemSize,
+                                    assetPath: 'assets/images/pedia_np.png',
+                                    onTap: () => context.push('/pediasure_c'),
                                   ),
                                 ],
                               ),
